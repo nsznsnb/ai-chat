@@ -35,7 +35,7 @@ jobs:
         run: npx prisma generate
 
       - name: Run ESLint
-        run: npm run lint -- --dir .
+        run: npx next lint
 
       - name: Run TypeScript type check
         run: npx tsc --noEmit
