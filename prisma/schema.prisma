@@ -1,0 +1,24 @@
+// This is your Prisma schema file
+// Learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ChatLogモデル: APIリクエスト・レスポンスのログ記録用
+model ChatLog {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionId String?  // セッションID（オプション、将来的な拡張用）
+  message   String   // ユーザーメッセージ
+  response  String   // AIレスポンス
+  timestamp DateTime @default(now()) // ログ記録時刻
+  error     String?  // エラーメッセージ（エラー時のみ）
+
+  @@index([timestamp]) // タイムスタンプでの検索最適化
+  @@index([sessionId]) // セッションIDでの検索最適化
+}

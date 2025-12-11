@@ -1,0 +1,82 @@
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+
+# Node.js dependencies:
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js build outputs
+.next/
+out/
+build/
+
+# Testing
+coverage/
+.nyc_output/
+*.test.ts
+*.spec.ts
+tests/
+
+# Environment files
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CI/CD (workflows are needed for GitHub Actions)
+.github/workflows/
+
+# Documentation
+README.md
+CLAUDE.md
+TODO.md
+docs/
+
+# Docker
+docker-compose.yml
+.docker/
+
+# PowerShell scripts
+*.ps1
+*.sh
+
+# Build artifacts
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
