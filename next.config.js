@@ -5,10 +5,6 @@ const nextConfig = {
   compress: true,
   output: 'standalone',
 
-  eslint: {
-    dirs: ['app', 'components', 'contexts', 'hooks', 'lib', 'types'],
-  },
-
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
